@@ -1,0 +1,21 @@
+:root {
+  --color-bg: #0d0d12;
+  --color-bg-elevated: #17171f;
+  --color-accent: #d4a355;
+  --color-accent-soft: #e8c98a;
+  --color-text: #f5f0e6;
+  --color-text-muted: #a9a6b0;
+
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 8px 40px rgba(212, 163, 85, 0.15);
+
+  --radius-md: 12px;
+  --font-body: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
