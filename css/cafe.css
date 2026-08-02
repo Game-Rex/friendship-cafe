@@ -27,6 +27,7 @@
   position: absolute;
   top: 55%;
   left: 50%;
+  z-index: 2;
   transform: translate(-50%, -50%);
   width: 310px;
   height: 130px;
