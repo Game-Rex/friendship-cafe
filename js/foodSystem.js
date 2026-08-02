@@ -32,6 +32,7 @@ export default {
       item.textContent = food.icon;
       item.addEventListener('click', () => {
         if (eatCallback) eatCallback(id);
+        item.remove();
       });
       tableFood.appendChild(item);
     });
