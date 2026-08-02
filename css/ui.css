@@ -272,8 +272,9 @@
 }
 
 .message-box-status {
-  top: 190px;
-  left: 16px;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .message-box-final {
