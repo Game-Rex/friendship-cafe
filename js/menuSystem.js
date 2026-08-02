@@ -21,6 +21,7 @@ function render() {
       } else {
         selectedIds.add(food.id);
       }
+      placeOrderBtn.classList.toggle('visible', selectedIds.size > 0);
     });
     list.appendChild(item);
   });
