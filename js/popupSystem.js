@@ -10,6 +10,6 @@ export default {
     hideTimeout = setTimeout(() => {
       popup.classList.remove('visible');
       if (onComplete) onComplete();
-    }, 1600);
+    }, 1500);
   },
 };
