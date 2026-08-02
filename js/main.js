@@ -23,3 +23,8 @@ MenuSystem.onPlaceOrder((foodIds) => {
     });
   });
 });
+
+FoodSystem.onEat((foodId) => {
+  const message = MessageSystem.getMessage(foodId);
+  PopupSystem.show(message);
+});
