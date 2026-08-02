@@ -73,7 +73,7 @@
   height: 140px;
   z-index: 4;
   transform: translateX(-500px);
-  transition: transform 1s ease;
+  transition: transform 1.8s ease;
 }
 
 .waiter-head {
@@ -110,7 +110,7 @@
 }
 
 .waiter.walking-in {
-  transform: translateX(-70px);
+  transform: translateX(-40px);
 }
 
 .waiter.walking-out {
