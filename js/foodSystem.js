@@ -1,4 +1,3 @@
-import AnimationSystem from './animationSystem.js';
 const foods = [
   { id: 'pizza', name: 'Pizza', icon: '🍕' },
   { id: 'burger', name: 'Burger', icon: '🍔' },
@@ -14,7 +13,7 @@ const foods = [
   { id: 'ramen', name: 'Ramen', icon: '🍜' },
 ];
 
-const tableFood = document.getElementById('tableFood');
+const servingTray = document.getElementById('servingTray');
 let eatCallback = null;
 
 export default {
@@ -24,19 +23,30 @@ export default {
   getFoodData(foodId) {
     return foods.find((f) => f.id === foodId) || null;
   },
-  placeOnTable(foodIds) {
-    tableFood.innerHTML = '';
-    foodIds.forEach((id, index) => {
-      const food = this.getFoodData(id);
-      const item = document.createElement('span');
-      item.className = 'table-food-item';
-      item.textContent = food.icon;
+  sendTrayToTable(foodIds) {
+    const shown = foodIds.slice(0, 4);
+
+    servingTray.innerHTML = shown
+      .map((id) => `<span class="tray-food-item" data-id="${id}">${this.getFoodData(id).icon}</span>`)
+      .join('');
+
+    servingTray.classList.add('visible', 'at-waiter');
+    servingTray.classList.remove('at-table');
+
+    // Force layout so the "at-waiter" position registers before we animate
+    void servingTray.offsetWidth;
+
+    requestAnimationFrame(() => {
+      servingTray.classList.remove('at-waiter');
+      servingTray.classList.add('at-table');
+    });
+
+    servingTray.querySelectorAll('.tray-food-item').forEach((item) => {
       item.addEventListener('click', () => {
+        const id = item.dataset.id;
         if (eatCallback) eatCallback(id);
         item.remove();
       });
-      tableFood.appendChild(item);
-      AnimationSystem.reveal(item, index * 120);
     });
   },
   onEat(callback) {
