@@ -168,3 +168,6 @@
 .place-order-btn:active {
   background: var(--color-accent-soft);
 }
+.place-order-btn.visible {
+  display: block;
+}
