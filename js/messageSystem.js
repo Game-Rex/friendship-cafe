@@ -13,8 +13,22 @@ const messages = {
   ramen: "Like a good bowl of ramen, our friendship just gets better with time.",
 };
 
+const statusBox = document.getElementById('statusBox');
+const statusBoxText = document.getElementById('statusBoxText');
+const finalBox = document.getElementById('finalBox');
+let finalShown = false;
+
 export default {
   getMessage(foodId) {
     return messages[foodId] || 'Cheers to a wonderful friendship!';
+  },
+  showStatus(text) {
+    statusBoxText.textContent = text;
+    statusBox.classList.remove('hidden');
+  },
+  showFinalMessage() {
+    if (finalShown) return;
+    finalShown = true;
+    finalBox.classList.remove('hidden');
   },
 };
