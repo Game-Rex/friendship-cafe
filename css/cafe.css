@@ -189,3 +189,99 @@
 .tray-food-item:active {
   transform: scale(1.2);
 }
+
+.welcome-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  padding: 24px;
+}
+
+.welcome-screen.hidden {
+  display: none;
+}
+
+.welcome-card {
+  max-width: 340px;
+  text-align: center;
+}
+
+.welcome-title {
+  color: var(--color-accent);
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin: 0 0 16px;
+}
+
+.welcome-message p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.enter-cafe-btn {
+  margin-top: 8px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: #1a1408;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.enter-cafe-btn:active {
+  background: var(--color-accent-soft);
+}
+
+.message-box {
+  position: fixed;
+  z-index: 5;
+  max-width: 200px;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 12px 14px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.message-box.hidden {
+  display: none;
+}
+
+.message-box-status {
+  top: 16px;
+  left: 16px;
+}
+
+.message-box-final {
+  top: 16px;
+  right: 16px;
+}
+
+.message-box-final p {
+  margin: 0 0 6px;
+}
+
+.final-title {
+  color: var(--color-accent);
+  font-size: 13px;
+}
+
+.message-box-final .final-signature {
+  margin-top: 4px;
+  margin-bottom: 0;
+  text-align: right;
+  color: var(--color-accent-soft);
+  font-style: italic;
+}
