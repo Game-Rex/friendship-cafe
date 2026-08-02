@@ -11,6 +11,11 @@ console.log('WaiterSystem loaded', WaiterSystem);
 console.log('FoodSystem loaded', FoodSystem);
 console.log('MessageSystem loaded', MessageSystem);
 console.log('AnimationSystem loaded', AnimationSystem);
+document.getElementById('enterCafeBtn').addEventListener('click', () => {
+  document.getElementById('welcomeScreen').classList.add('hidden');
+  MessageSystem.showStatus("Welcome! The menu is on the table. Feel free to order anything you'd like.✨");
+});
+
 document.getElementById('menuCard').addEventListener('click', () => {
   MenuSystem.open();
 });
@@ -20,11 +25,13 @@ MenuSystem.onPlaceOrder((foodIds) => {
   PopupSystem.show('Your order is coming right up!', () => {
     WaiterSystem.serve(foodIds, () => {
       FoodSystem.sendTrayToTable(foodIds);
+      MessageSystem.showFinalMessage();
     });
   });
 });
 
-FoodSystem.onEat((foodId) => {
+FoodSystem.onEat((foodId, trayNowEmpty) => {
   const message = MessageSystem.getMessage(foodId);
-  PopupSystem.show(message);
+  const text = trayNowEmpty ? `${message} Feel free to order again!` : message;
+  MessageSystem.showStatus(text);
 });
