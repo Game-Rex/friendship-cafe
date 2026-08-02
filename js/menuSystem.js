@@ -1,12 +1,31 @@
-/**
- * Menu System
- * Responsible for opening/closing the food menu and reporting
- * the visitor's selection back to the caller.
- */
+import FoodSystem from './foodSystem.js';
+
+const overlay = document.getElementById('menuOverlay');
+const list = document.getElementById('menuList');
+let selectCallback = null;
+
+function render() {
+  list.innerHTML = '';
+  FoodSystem.getAllFoods().forEach((food) => {
+    const item = document.createElement('div');
+    item.className = 'menu-item';
+    item.innerHTML = `<span class="menu-item-icon">${food.icon}</span><span class="menu-item-name">${food.name}</span>`;
+    item.addEventListener('click', () => {
+      if (selectCallback) selectCallback(food.id);
+    });
+    list.appendChild(item);
+  });
+}
+
 export default {
   open() {
-    console.log('Menu opened — popup UI comes in a later step');
+    render();
+    overlay.classList.remove('hidden');
   },
-  close() {},
-  onSelect(callback) {},
+  close() {
+    overlay.classList.add('hidden');
+  },
+  onSelect(callback) {
+    selectCallback = callback;
+  },
 };
