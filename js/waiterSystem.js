@@ -19,6 +19,7 @@ export default {
     setTimeout(() => {
       waiter.classList.remove('walking-in');
       waiter.classList.add('walking-out');
+      tray.innerHTML = '';
       if (onComplete) onComplete();
     }, ENTER_DURATION + PAUSE_DURATION);
 
