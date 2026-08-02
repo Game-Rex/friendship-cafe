@@ -14,6 +14,7 @@ const foods = [
 ];
 
 const tableFood = document.getElementById('tableFood');
+let eatCallback = null;
 
 export default {
   getAllFoods() {
@@ -23,8 +24,19 @@ export default {
     return foods.find((f) => f.id === foodId) || null;
   },
   placeOnTable(foodIds) {
-    tableFood.innerHTML = foodIds
-      .map((id) => `<span class="table-food-item">${this.getFoodData(id).icon}</span>`)
-      .join('');
+    tableFood.innerHTML = '';
+    foodIds.forEach((id) => {
+      const food = this.getFoodData(id);
+      const item = document.createElement('span');
+      item.className = 'table-food-item';
+      item.textContent = food.icon;
+      item.addEventListener('click', () => {
+        if (eatCallback) eatCallback(id);
+      });
+      tableFood.appendChild(item);
+    });
+  },
+  onEat(callback) {
+    eatCallback = callback;
   },
 };
