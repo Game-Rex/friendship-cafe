@@ -1,11 +1,11 @@
 .menu-card {
   position: absolute;
   top: 55%;
-  left: 50%;
+  left: 70%;
   z-index: 3;
-  width: 90px;
-  height: 130px;
-  transform: translate(-50%, -50%) rotate(-10deg);
+  width: 80px;
+  height: 100px;
+  transform: translate(-50%, -50%) rotate(-8deg);
   background: linear-gradient(160deg, #241a12 0%, #120d09 100%);
   border: 1.5px solid var(--color-accent);
   border-radius: 6px;
