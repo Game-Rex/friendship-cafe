@@ -104,12 +104,12 @@
 .waiter-arm {
   position: absolute;
   top: 132px;
-  right: 12px;
-  width: 40px;
+  right: 6px;
+  width: 60px;
   height: 16px;
   border-radius: 8px;
   background: #d8b89a;
-  z-index: 1;
+  z-index: 2;
 }
 
 .waiter-body {
@@ -125,7 +125,7 @@
 .waiter-tray {
   position: absolute;
   top: 120px;
-  right: -36px;
+  right: -52px;
   width: 92px;
   height: 28px;
   z-index: 3;
