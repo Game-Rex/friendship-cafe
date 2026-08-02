@@ -163,3 +163,13 @@
   font-size: 22px;
   pointer-events: none;
 }
+
+.table-food-item {
+  pointer-events: auto;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.table-food-item:active {
+  transform: scale(1.25);
+}
