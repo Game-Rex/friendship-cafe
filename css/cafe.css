@@ -6,7 +6,10 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(ellipse at center 60%, #26201a 0%, var(--color-bg) 70%);
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 30%, rgba(120, 85, 55, 0.22) 0%, transparent 70%),
+    linear-gradient(180deg, #140f0b 0%, #211810 40%, #170f0a 100%),
+    radial-gradient(ellipse at center 60%, #26201a 0%, var(--color-bg) 70%);
   box-shadow: var(--shadow-soft);
 }
 
@@ -20,6 +23,53 @@
   height: 300px;
   background: radial-gradient(circle, rgba(212, 163, 85, 0.25) 0%, transparent 70%);
   filter: blur(10px);
+  pointer-events: none;
+}
+
+.wall-light {
+  position: absolute;
+  top: 22%;
+  width: 6px;
+  height: 40px;
+  border-radius: 3px;
+  z-index: 0;
+  background: linear-gradient(180deg, var(--color-accent) 0%, rgba(212, 163, 85, 0.3) 100%);
+  box-shadow: 0 0 20px 8px rgba(212, 163, 85, 0.25);
+}
+
+.wall-light::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(212, 163, 85, 0.15) 0%, transparent 70%);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+.wall-light-left {
+  left: 12%;
+}
+
+.wall-light-right {
+  right: 12%;
+}
+
+.cafe-sign {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: var(--color-accent);
+  opacity: 0.4;
+  text-shadow: 0 0 12px rgba(212, 163, 85, 0.5);
+  white-space: nowrap;
   pointer-events: none;
 }
 
