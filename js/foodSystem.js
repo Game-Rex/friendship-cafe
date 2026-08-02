@@ -13,11 +13,18 @@ const foods = [
   { id: 'ramen', name: 'Ramen', icon: '🍜' },
 ];
 
+const tableFood = document.getElementById('tableFood');
+
 export default {
   getAllFoods() {
     return foods;
   },
   getFoodData(foodId) {
     return foods.find((f) => f.id === foodId) || null;
+  },
+  placeOnTable(foodIds) {
+    tableFood.innerHTML = foodIds
+      .map((id) => `<span class="table-food-item">${this.getFoodData(id).icon}</span>`)
+      .join('');
   },
 };
