@@ -277,7 +277,8 @@
 }
 
 .message-box-final {
-  top: 16px;
+  top: auto;
+  bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
