@@ -1,3 +1,4 @@
+import AnimationSystem from './animationSystem.js';
 const foods = [
   { id: 'pizza', name: 'Pizza', icon: '🍕' },
   { id: 'burger', name: 'Burger', icon: '🍔' },
@@ -25,7 +26,7 @@ export default {
   },
   placeOnTable(foodIds) {
     tableFood.innerHTML = '';
-    foodIds.forEach((id) => {
+    foodIds.forEach((id, index) => {
       const food = this.getFoodData(id);
       const item = document.createElement('span');
       item.className = 'table-food-item';
@@ -35,6 +36,7 @@ export default {
         item.remove();
       });
       tableFood.appendChild(item);
+      AnimationSystem.reveal(item, index * 120);
     });
   },
   onEat(callback) {
