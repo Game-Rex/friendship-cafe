@@ -17,5 +17,7 @@ document.getElementById('menuCard').addEventListener('click', () => {
 
 MenuSystem.onPlaceOrder((foodIds) => {
   MenuSystem.close();
-  console.log('Order placed:', foodIds);
+  PopupSystem.show('Your order is coming right up!', () => {
+    console.log('Popup done — waiter step comes next');
+  });
 });
