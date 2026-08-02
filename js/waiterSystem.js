@@ -25,3 +25,5 @@ export default {
     setTimeout(() => {
       waiter.classList.remove('walking-out');
     }, ENTER_DURATION + PAUSE_DURATION + EXIT_DURATION);
+  },
+};
