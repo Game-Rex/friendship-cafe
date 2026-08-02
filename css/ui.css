@@ -272,13 +272,17 @@
 }
 
 .message-box-status {
-  top: 16px;
+  top: 190px;
   left: 16px;
 }
 
 .message-box-final {
   top: 16px;
-  right: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 480px;
+  text-align: center;
 }
 
 .message-box-final p {
