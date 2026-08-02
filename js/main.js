@@ -19,7 +19,7 @@ MenuSystem.onPlaceOrder((foodIds) => {
   MenuSystem.close();
   PopupSystem.show('Your order is coming right up!', () => {
     WaiterSystem.serve(foodIds, () => {
-      FoodSystem.placeOnTable(foodIds);
+      FoodSystem.sendTrayToTable(foodIds);
     });
   });
 });
