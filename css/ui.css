@@ -1,5 +1,77 @@
-/* Menu system placeholder styles */
-.menu {
+.menu-card {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  z-index: 3;
+  width: 90px;
+  height: 130px;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  background: linear-gradient(160deg, #241a12 0%, #120d09 100%);
+  border: 1.5px solid var(--color-accent);
+  border-radius: 6px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.menu-card:active {
+  transform: translate(-50%, -50%) rotate(-10deg) scale(0.97);
+}
+
+.menu-card-highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.menu-card-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 8px;
+}
+
+.menu-card-title {
+  margin: 0;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  color: var(--color-accent-soft);
+}
+
+.menu-card-divider {
+  width: 24px;
+  height: 1px;
+  background: var(--color-accent);
+  margin: 6px auto;
+  position: relative;
+}
+
+.menu-card-divider::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.menu-card-subtitle {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--color-accent);
+  font-weight: bold;
 }
 
 /* Popup system placeholder styles */
