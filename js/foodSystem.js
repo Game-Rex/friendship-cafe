@@ -6,7 +6,7 @@ const foods = [
   { id: 'donut', name: 'Donut', icon: '🍩' },
   { id: 'icecream', name: 'Ice Cream', icon: '🍦' },
   { id: 'coffee', name: 'Coffee', icon: '☕' },
-  { id: 'bubbletea', name: 'Bubble Tea', icon: '🧋' },
+  { id: 'momos', name: 'Momos', icon: '🥟' },
   { id: 'cookies', name: 'Cookies', icon: '🍪' },
   { id: 'chocolate', name: 'Chocolate', icon: '🍫' },
   { id: 'colddrink', name: 'Cold Drink', icon: '🥤' },
