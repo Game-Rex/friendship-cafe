@@ -4,7 +4,9 @@
  * the visitor's selection back to the caller.
  */
 export default {
-  open() {},
+  open() {
+    console.log('Menu opened — popup UI comes in a later step');
+  },
   close() {},
   onSelect(callback) {},
 };
