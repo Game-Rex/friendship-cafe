@@ -11,3 +11,6 @@ console.log('WaiterSystem loaded', WaiterSystem);
 console.log('FoodSystem loaded', FoodSystem);
 console.log('MessageSystem loaded', MessageSystem);
 console.log('AnimationSystem loaded', AnimationSystem);
+document.getElementById('menuCard').addEventListener('click', () => {
+  MenuSystem.open();
+});
