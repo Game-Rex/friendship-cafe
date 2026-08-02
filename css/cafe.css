@@ -124,10 +124,11 @@
 
 .waiter-tray {
   position: absolute;
-  top: 120px;
+  top: 110px;
   right: -6px;
   width: 56px;
   height: 56px;
+  z-index: 3;
   border-radius: 10px;
   background: #3d2a1a;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
