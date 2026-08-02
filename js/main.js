@@ -18,6 +18,8 @@ document.getElementById('menuCard').addEventListener('click', () => {
 MenuSystem.onPlaceOrder((foodIds) => {
   MenuSystem.close();
   PopupSystem.show('Your order is coming right up!', () => {
-    console.log('Popup done — waiter step comes next');
+    WaiterSystem.serve(foodIds, () => {
+      console.log('Waiter served — reveal + message step comes next');
+    });
   });
 });
