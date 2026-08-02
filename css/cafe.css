@@ -4,8 +4,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-bg-elevated);
-  box-shadow: var(--shadow-soft);
   position: relative;
   overflow: hidden;
+  background: radial-gradient(ellipse at center 60%, #26201a 0%, var(--color-bg) 70%);
+  box-shadow: var(--shadow-soft);
+}
+
+.cafe-scene::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(212, 163, 85, 0.25) 0%, transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
 }
