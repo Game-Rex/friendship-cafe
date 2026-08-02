@@ -191,6 +191,33 @@
   font-size: 16px;
 }
 
+.waiter-eyes {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.waiter-eyes span {
+  width: 6px;
+  height: 2px;
+  background: #4a3323;
+  border-radius: 1px;
+}
+
+.waiter-smile {
+  position: absolute;
+  top: 56%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 6px;
+  border-bottom: 2px solid #4a3323;
+  border-radius: 0 0 8px 8px;
+}
+
 .waiter.walking-in {
   transform: translateX(-120px);
 }
