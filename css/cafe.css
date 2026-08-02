@@ -127,7 +127,7 @@
   top: 40px;
   right: -36px;
   width: 92px;
-  height: -50px;
+  height: 50px;
   z-index: 3;
   border-radius: 12px;
   background: #3d2a1a;
@@ -140,7 +140,7 @@
 }
 
 .waiter.walking-in {
-  transform: translateX(10px);
+  transform: translateX(-120px);
 }
 
 .waiter.walking-out {
