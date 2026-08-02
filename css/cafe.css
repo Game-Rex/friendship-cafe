@@ -146,3 +146,14 @@
 .waiter.walking-out {
   transform: translateX(-500px);
 }
+
+.table-food {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 26px;
+  pointer-events: none;
+}
