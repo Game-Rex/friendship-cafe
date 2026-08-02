@@ -44,8 +44,9 @@ export default {
     servingTray.querySelectorAll('.tray-food-item').forEach((item) => {
       item.addEventListener('click', () => {
         const id = item.dataset.id;
-        if (eatCallback) eatCallback(id);
         item.remove();
+        const trayNowEmpty = servingTray.children.length === 0;
+        if (eatCallback) eatCallback(id, trayNowEmpty);
       });
     });
   },
