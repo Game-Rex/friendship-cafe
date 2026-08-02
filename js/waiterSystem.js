@@ -10,16 +10,18 @@ export default {
       .map((id) => `<span>${FoodSystem.getFoodData(id).icon}</span>`)
       .join('');
 
+    const ENTER_DURATION = 1800;
+    const PAUSE_DURATION = 1500;
+    const EXIT_DURATION = 1800;
+
     waiter.classList.add('walking-in');
 
     setTimeout(() => {
       waiter.classList.remove('walking-in');
       waiter.classList.add('walking-out');
       if (onComplete) onComplete();
-    }, 1400);
+    }, ENTER_DURATION + PAUSE_DURATION);
 
     setTimeout(() => {
       waiter.classList.remove('walking-out');
-    }, 2400);
-  },
-};
+    }, ENTER_DURATION + PAUSE_DURATION + EXIT_DURATION);
