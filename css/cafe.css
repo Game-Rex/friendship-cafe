@@ -64,3 +64,47 @@
   background: radial-gradient(ellipse at 50% 30%, #4a331f 0%, #2a1c10 80%);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
+
+.waiter {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  width: 60px;
+  height: 140px;
+  z-index: 4;
+  transform: translateX(-500px);
+  transition: transform 1s ease;
+}
+
+.waiter-head {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #d8b89a;
+  margin: 0 auto;
+}
+
+.waiter-body {
+  width: 44px;
+  height: 90px;
+  margin: 4px auto 0;
+  border-radius: 12px 12px 4px 4px;
+  background: linear-gradient(180deg, #1c1c24 0%, #101014 100%);
+  border: 1px solid rgba(212, 163, 85, 0.3);
+}
+
+.waiter-tray {
+  position: absolute;
+  top: 20px;
+  right: -18px;
+  width: 46px;
+  height: 14px;
+  border-radius: 6px;
+  background: #3d2a1a;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 10px;
+}
