@@ -147,36 +147,43 @@
   transform: translateX(-500px);
 }
 
-.table-food {
+.serving-tray {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 76px;
-  height: 76px;
-  display: grid;
+  z-index: 2;
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 2px;
+  width: 76px;
+  height: 76px;
   align-items: center;
   justify-items: center;
   font-size: 22px;
-  pointer-events: none;
+  background: rgba(61, 42, 26, 0.85);
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  transform: translate(-50%, -50%);
+  transition: top 1s ease, left 1s ease;
 }
 
-.table-food-item {
-  pointer-events: auto;
+.serving-tray.visible {
+  display: grid;
+}
+
+.serving-tray.at-waiter {
+  top: 62%;
+  left: 38%;
+}
+
+.serving-tray.at-table {
+  top: 55%;
+  left: 50%;
+}
+
+.tray-food-item {
   cursor: pointer;
-  opacity: 0;
-  transform: scale(0.2);
-  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.table-food-item.reveal {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.table-food-item:active {
-  transform: scale(1.25);
+.tray-food-item:active {
+  transform: scale(1.2);
 }
