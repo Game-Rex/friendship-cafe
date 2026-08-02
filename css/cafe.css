@@ -108,3 +108,11 @@
   gap: 2px;
   font-size: 10px;
 }
+
+.waiter.walking-in {
+  transform: translateX(-70px);
+}
+
+.waiter.walking-out {
+  transform: translateX(-500px);
+}
