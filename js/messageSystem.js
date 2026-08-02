@@ -6,7 +6,7 @@ const messages = {
   donut: "A friendship this sweet deserves a donut and a whole lot of love.",
   icecream: "Cool moments, warm hearts — that's what friendship is made of.",
   coffee: "Some friendships brew slowly but stay strong, just like a good cup of coffee.",
-  bubbletea: "Life's full of little bubbles of joy — thanks for sharing them with me.",
+  momos: "Good friends and good momos both make everything better, one bite at a time.",
   cookies: "Friendship is the best kind of cookie — always better when shared.",
   chocolate: "A friend as sweet as chocolate makes every day a little brighter.",
   colddrink: "Here's to a friendship that stays refreshing no matter how much time passes.",
