@@ -14,3 +14,8 @@ console.log('AnimationSystem loaded', AnimationSystem);
 document.getElementById('menuCard').addEventListener('click', () => {
   MenuSystem.open();
 });
+
+MenuSystem.onSelect((foodId) => {
+  console.log('Selected food:', foodId);
+  MenuSystem.close();
+});
