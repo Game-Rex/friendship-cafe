@@ -15,7 +15,7 @@ document.getElementById('menuCard').addEventListener('click', () => {
   MenuSystem.open();
 });
 
-MenuSystem.onSelect((foodId) => {
-  console.log('Selected food:', foodId);
+MenuSystem.onPlaceOrder((foodIds) => {
   MenuSystem.close();
+  console.log('Order placed:', foodIds);
 });
