@@ -2,20 +2,34 @@ import FoodSystem from './foodSystem.js';
 
 const overlay = document.getElementById('menuOverlay');
 const list = document.getElementById('menuList');
-let selectCallback = null;
+const placeOrderBtn = document.getElementById('placeOrderBtn');
+let placeOrderCallback = null;
+const selectedIds = new Set();
 
 function render() {
   list.innerHTML = '';
+  selectedIds.clear();
   FoodSystem.getAllFoods().forEach((food) => {
     const item = document.createElement('div');
     item.className = 'menu-item';
     item.innerHTML = `<span class="menu-item-icon">${food.icon}</span><span class="menu-item-name">${food.name}</span>`;
     item.addEventListener('click', () => {
-      if (selectCallback) selectCallback(food.id);
+      item.classList.toggle('selected');
+      if (selectedIds.has(food.id)) {
+        selectedIds.delete(food.id);
+      } else {
+        selectedIds.add(food.id);
+      }
     });
     list.appendChild(item);
   });
 }
+
+placeOrderBtn.addEventListener('click', () => {
+  if (selectedIds.size === 0) return;
+  const foodIds = Array.from(selectedIds);
+  if (placeOrderCallback) placeOrderCallback(foodIds);
+});
 
 export default {
   open() {
@@ -25,7 +39,7 @@ export default {
   close() {
     overlay.classList.add('hidden');
   },
-  onSelect(callback) {
-    selectCallback = callback;
+  onPlaceOrder(callback) {
+    placeOrderCallback = callback;
   },
 };
