@@ -9,6 +9,7 @@ const selectedIds = new Set();
 function render() {
   list.innerHTML = '';
   selectedIds.clear();
+  placeOrderBtn.classList.remove('visible');
   FoodSystem.getAllFoods().forEach((food) => {
     const item = document.createElement('div');
     item.className = 'menu-item';
