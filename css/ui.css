@@ -144,3 +144,27 @@
   color: var(--color-text-muted);
   text-align: center;
 }
+
+.menu-item.selected {
+  border-color: var(--color-accent);
+  background: rgba(212, 163, 85, 0.12);
+}
+
+.place-order-btn {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: #1a1408;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.place-order-btn:active {
+  background: var(--color-accent-soft);
+}
